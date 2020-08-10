@@ -51,6 +51,10 @@ def getPositionData(gps):
 
 #목표 위치의 좌표값과 현재 위치의 좌표값을 계산해 방위각과 거리 구하기
 def calculation():
+    global DisX
+    global DisY
+    global distance
+    global angle
     DisX = (TarX - PosX) * 69.1 * math.cos(PosY / 57.3) * 1.6
     DisY = (TarY - PosY) * 69.1 * 1.6
     distance = (DisX ** 2 + DisY ** 2) ** 0.5
